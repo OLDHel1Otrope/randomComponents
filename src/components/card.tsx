@@ -6,7 +6,7 @@ import DraggableDiv from "./DraggableDiv";
 const InfoCard = ({}) => {
   const [visible, setVisible] = useState(false);
   return (
-    <div className="rounded-4xl flex flex-col gap-2 bg-stone-300 w-full h-full shadow-[inset_0px_0px_8px_rgba(0,0,0,0.4)] p-10 "
+    <div className="rounded-4xl flex flex-col gap-2 bg-stone-300 w-full h-full shadow-[inset_0px_0px_8px_rgba(0,0,0,0.4)] p-10 hover:bg-stone-200 transition-all duration-500"
     onClick={()=>setVisible(!visible)}>
         <div className="rounded-2xl bg-stone-700 w-100 h-40  shadow-[inset_0px_0px_8px_rgba(0,0,0,0.4)] p-10 "></div>
         <h1 className="font-semibold text-stone-800">Project Heading</h1>

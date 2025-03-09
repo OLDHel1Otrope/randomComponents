@@ -120,15 +120,8 @@ const GridComponent = () => {
             style={{
               gridColumn: `${card.x + 1} / span ${card.width}`,
               gridRow: `${card.y + 1} / span ${card.height}`,
-              // color: card.textColor,
-              // border: card.className === "card-7x4" ? "0px solid #ffffff" : "none",
-              // borderRadius: card.className === "card-7x4" ? "70px" : "1px",
-              // borderRadius: "25px",
             }}
           >
-            {/* <TextGenerator data="explore" size={"ultraSmall"} /> */}
-
-            {/* {card?.data} */}
             <InfoCard />
           </div>
         ))}
