@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="127.33569mm"
+   height="127.33571mm"
+   viewBox="0 0 127.33569 127.33571"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="default.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#494949"
+     bordercolor="#000000"
+     borderopacity="0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#494949"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.26740451"
+     inkscape:cx="557.20825"
+     inkscape:cy="1707.1514"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="48"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient3"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#4e4e4e;stop-opacity:1;"
+         offset="0"
+         id="stop3" />
+      <stop
+         style="stop-color:#333333;stop-opacity:0;"
+         offset="1"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3"
+       id="linearGradient4"
+       x1="-43.926071"
+       y1="678.91266"
+       x2="-43.926071"
+       y2="779.2793"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(107.74559,-679.35691)">
+    <rect
+       style="fill:#666666;stroke-width:0.793001;paint-order:markers fill stroke"
+       id="rect1"
+       width="127.33569"
+       height="127.33569"
+       x="-107.74558"
+       y="679.35693"
+       ry="0" />
+    <path
+       style="fill:url(#linearGradient4);stroke-width:0.793001;paint-order:markers fill stroke"
+       d="M -107.74558,806.69261 19.590111,679.35693 v 127.33568 z"
+       id="path3"
+       sodipodi:nodetypes="cccc" />
+  </g>
+</svg>

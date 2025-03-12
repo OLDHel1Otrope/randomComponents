@@ -8,13 +8,21 @@ const GridComponent = () => {
   const [cards, setCards] = useState([]);
 
   const cardTypes = [
-    { className: "card-7x4", width: 7, height: 4, count: 1, data: "Portfolio" },
+    {
+      className: "card-7x4",
+      width: 7,
+      height: 4,
+      count: 1,
+      data: "Portfolio",
+      size: 4,
+    },
     {
       className: "card-3x3",
       width: 6,
       height: 2,
       count: 7,
       data: "High Tier weight carrying things",
+      size: 2,
     },
     {
       className: "card-2x2",
@@ -22,6 +30,7 @@ const GridComponent = () => {
       height: 2,
       count: 150,
       data: "Experiences",
+      size: 2,
     },
     {
       className: "card-2x2",
@@ -29,6 +38,7 @@ const GridComponent = () => {
       height: 1,
       count: 150,
       data: "Experiences",
+      size: 1,
     },
 
     {
@@ -37,6 +47,7 @@ const GridComponent = () => {
       height: 1,
       count: 200,
       data: "general stuff",
+      size: 1,
     },
   ];
 
@@ -76,7 +87,7 @@ const GridComponent = () => {
   useEffect(() => {
     const placeCards = async () => {
       const newCards = [];
-      for (const { className, width, height, count, data } of cardTypes) {
+      for (const { className, width, height, count, data, size } of cardTypes) {
         for (let i = 0; i < count; i++) {
           const position = chooseRandomPosition(width, height);
           if (position) {
@@ -92,6 +103,7 @@ const GridComponent = () => {
               data,
               color: chosenColor.primary,
               textColor: chosenColor.secondary ? "white" : "#282828",
+              size: size,
             });
 
             setCards([...newCards]);
@@ -106,7 +118,7 @@ const GridComponent = () => {
   return (
     <div className="w-screen h-screen bg-stone-900">
       <div
-        className="grid gap-2 bg-stone-900 p-0 w-full h-full place-content-center"
+        className="grid gap-2 bg-stone-900 w-full h-full place-content-center"
         style={{
           gridTemplateColumns: `repeat(${gridCols}, 100px)`,
           gridTemplateRows: `repeat(${gridRows}, 100px)`,
@@ -122,7 +134,7 @@ const GridComponent = () => {
               gridRow: `${card.y + 1} / span ${card.height}`,
             }}
           >
-            <InfoCard />
+            <InfoCard size={card.size} />
           </div>
         ))}
       </div>
