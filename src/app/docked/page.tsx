@@ -1,4 +1,4 @@
-import Dock from "@/components/dock";
+import Dock from "@/components/Dock";
 const DesktopView=()=>{
     return(
         <div>
