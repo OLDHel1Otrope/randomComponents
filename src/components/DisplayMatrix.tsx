@@ -17,9 +17,9 @@ const DisplayMatrix = () => {
       </div>
 
       <p className="mt-2 text-gray-300">
-        I love solving problems, whether it's debugging tricky JavaScript issues
-        or optimizing SQL queries. Web development isn't just something I
-        do—it's something I genuinely enjoy.
+        I love solving problems, whether it&apos;s debugging tricky JavaScript issues
+        or optimizing SQL queries. Web development isn&apos;t just something I
+        do—it&apos;s something I genuinely enjoy.
       </p>
       <p className="mt-2 text-gray-300">
         From building 3D web apps in Three.js to creating efficient backend

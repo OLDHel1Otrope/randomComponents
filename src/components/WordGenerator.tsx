@@ -61,7 +61,7 @@ const Letter = ({
       `}
       onClick={onClick}
     >
-      {gridItems.map((item, index) => (
+      {gridItems.map((item) => (
         <div
           key={`${normalizedLetter}-${item}`}
           className={`flex ${

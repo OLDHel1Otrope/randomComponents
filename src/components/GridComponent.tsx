@@ -113,7 +113,7 @@ const GridComponent = () => {
     };
 
     placeCards();
-  }, []);
+  }, [cardTypes, chooseRandomPosition, colors, store]);
 
   return (
     <div className="w-screen h-screen bg-stone-900">
