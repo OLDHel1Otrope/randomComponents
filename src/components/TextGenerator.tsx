@@ -17,7 +17,7 @@ const TextGenerator = ({ data,size }: { data: string,size:string }) => {
     );
   };
   return (
-    <div className="flex items-center gap-8">
+    <div className="flex items-center gap-4">
       {word.map((letter, index) => (
         <Letter
           key={`${letter}-${index}`}

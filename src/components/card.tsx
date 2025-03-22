@@ -28,7 +28,7 @@ const InfoCard = ({ size }: { size: number }) => {
         >
           <div className="rounded-3xl bg-stone-700 w-full h-full shadow-[inset_0px_0px_8px_rgba(0,0,0,0.4)] p-10"></div>
           <div>
-            <h1 className="font-semibold text-stone-800">Terminatad</h1>
+            <h1 className="font-semibold text-stone-800">ProjectTitle</h1>
             <p className="font-extrabold text-stone-600">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
               cumque, at id error, voluptas non ab vero quod consequuntur

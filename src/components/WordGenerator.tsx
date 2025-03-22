@@ -38,6 +38,7 @@ const Letter = ({
     X: [0, 4, 5, 9, 11, 13, 21, 23, 25, 17, 29, 30, 34],
     Y: [0, 4, 6, 8, 12, 17, 22, 27, 32],
     Z: [0, 1, 2, 3, 4, 9, 13, 17, 21, 25, 30, 31, 32, 33, 34],
+    "?": [0, 1, 2, 3, 9, 14, 17,18, 21,  31],
     "0": [1, 2, 3, 5, 9, 10, 14, 15, 19, 20, 24, 25, 29, 30, 31, 32],
     "1": [2, 7, 12, 17, 22, 27, 31, 32, 33],
     "2": [1, 2, 3, 5, 9, 10, 12, 16, 20, 24, 29, 30, 31, 32],
@@ -55,23 +56,22 @@ const Letter = ({
   const gridItems = Array.from({ length: 35 }, (_, i) => i + 1);
   return (
     <div
-      className={`grid grid-cols-5 grid-rows-7 overflow-hidden ${
-        size == "small" ? "gap-1" : "gap-2"
-      }`}
+      className={`grid grid-cols-5 grid-rows-7 overflow-hidden 
+        ${size == "small" ? "gap-1" : "gap-2"}
+      `}
       onClick={onClick}
     >
       {gridItems.map((item, index) => (
         <div
           key={`${normalizedLetter}-${item}`}
           className={`flex ${
-            size == "small" ? "w-1 h-1" : "w-4 h-4"
-          } rounded-3xl text-sm ${
+            size == "small" ? "w-1 h-1" : "w-2 h-2"
+          } rounded-sm text-sm ${
             charPixelMap[normalizedLetter]?.includes(item - 1)
-              ? "bg-[radial-gradient(circle,_rgba(255,20,20,1)_0%,_rgba(100,0,0,1)_70%)]"
-              : "bg-[#050505]"
+              ? "bg-[radial-gradient(circle,_rgba(220,220,220,1)_0%,_rgba(180,180,180,1)_70%)]"
+              : "bg-stone-950"
           }`}
         >
-          {/* {index} */}
         </div>
       ))}
     </div>
