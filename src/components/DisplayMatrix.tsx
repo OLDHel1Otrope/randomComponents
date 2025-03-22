@@ -1,6 +1,6 @@
 import TextGenerator from "./TextGenerator";
 
-const DisplayMatrix = ({ size }: { size: string }) => {
+const DisplayMatrix = () => {
   // const gridItems = Array.from({ length: 1000 }, (_, i) => i + 1);
 
   return (
