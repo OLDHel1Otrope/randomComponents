@@ -11,7 +11,6 @@ type IProps = {
 const DraggableDiv = ({ visible, closeFunction }: IProps) => {
   const nodeRef = useRef<HTMLDivElement>(null!);
   const [dblClick, setDblClick] = useState(false);
-  console.log("clicked");
 
   return (
     <Draggable
@@ -34,14 +33,14 @@ const DraggableDiv = ({ visible, closeFunction }: IProps) => {
       >
         <div
           className={`drag-handle flex justify-between px-4 items-center bg-stone-900 p-2 ${
-            dblClick ? "" : "rounded-t-md"
+            dblClick ? "rounded-t-m" : "rounded-t-md"
           } cursor-move h-12 border-b-2 border-red-400`}
           onDoubleClick={() => setDblClick(!dblClick)}
         >
           <span className="font-semibold">
-            Draggable Window{" "}
+            <i>Projetc name</i>{" "}
             <i className="text-stone-700 font-extralight">
-              (double click to fullscreen)
+              {/* (double click to fullscreen) */}
             </i>
           </span>
           <div className="flex items-center justify-center w-6 h-6 rounded-4xl bg-red-600">

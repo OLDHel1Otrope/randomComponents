@@ -21,8 +21,14 @@ const Portfolio = () => {
             Utkarsh Pathak
           </h1>
           <p className="text-lg text-stone-400 mt-2 group-hover:text-stone-300 transition-colors duration-300">
-            Full-Stack Developer & Digital Creator
+            Full-Stack Developer & Digital Creator{" "}
           </p>
+          <a
+            href="/resume"
+            className="text-stone-400 hover:text-stone-300 font-serif"
+          >
+            <i>Resume</i>
+          </a>
         </div>
 
         {/* Divider */}
@@ -51,8 +57,8 @@ const Portfolio = () => {
           </h2>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { title: "Portfolio Site", img: "/project1.jpg" },
-              { title: "E-commerce Dashboard", img: "/project2.jpg" },
+              { title: "Terminatad", img: "/project1.jpg" },
+              { title: "conviz", img: "/project2.jpg" },
             ].map((project, index) => (
               <div
                 key={index}

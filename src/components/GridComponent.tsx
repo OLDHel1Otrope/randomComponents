@@ -142,7 +142,15 @@ const GridComponent = () => {
   }, []);
 
   return (
-    // <div className="w-full h-screen bg-stone-900">
+    // <div className="w-full h-screen flex items-center justify-center bg-stone-900">
+    //   <div className="border">
+    //     <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-stone-400">
+    //       My Projects
+    //     </h1>
+    //     <p className="text-lg text-stone-400 mt-2">
+    //        SHOWCASE OF ALL MY WORK
+    //     </p>
+    //   </div>
     //   <div
     //     className="grid gap-2 bg-stone-900 w-full h-full place-content-center"
     //     style={{
@@ -175,7 +183,7 @@ const GridComponent = () => {
         </p>
       </div>
       <div
-        className="grid gap-3 p-6 bg-gradient-to-br from-stone-800/80 to-stone-900/80 rounded-4xl shadow-[inset_0px_0px_15px_rgba(0,0,0,0.5)] backdrop-blur-lg border border-stone-700/30 group hover:shadow-[inset_0px_0px_20px_rgba(0,0,0,0.6)] transition-all duration-300"
+        className="grid gap-2 p-6 bg-gradient-to-br from-stone-800/80 to-stone-900/80 rounded-4xl shadow-[inset_0px_0px_15px_rgba(0,0,0,0.5)] backdrop-blur-lg border border-stone-700/30 group hover:shadow-[inset_0px_0px_20px_rgba(0,0,0,0.6)] transition-all duration-300"
         style={{
           gridTemplateColumns: `repeat(${gridCols}, 100px)`,
           gridTemplateRows: `repeat(${gridRows}, 100px)`,
@@ -185,7 +193,7 @@ const GridComponent = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="flex items-center justify-center overflow-hidden rounded-3xl bg-stone-800/50 backdrop-blur-md   group-hover:border-stone-600/40 transition-all duration-300"
+            className="flex items-center justify-center overflow-hidden rounded-3xl bg-stone-800/50    group-hover:border-stone-600/40 transition-all duration-300"
             style={{
               gridColumn: `${card.x + 1} / span ${card.width}`,
               gridRow: `${card.y + 1} / span ${card.height}`,
