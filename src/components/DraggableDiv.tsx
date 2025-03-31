@@ -3,18 +3,22 @@
 import { useRef, useState } from "react";
 import Draggable from "react-draggable";
 
-type IProps={
-  visible: boolean,
-  closeFunction:()=>void
-}
+type IProps = {
+  visible: boolean;
+  closeFunction: () => void;
+};
 
-const DraggableDiv = ({ visible, closeFunction }:IProps) => {
+const DraggableDiv = ({ visible, closeFunction }: IProps) => {
   const nodeRef = useRef<HTMLDivElement>(null!);
   const [dblClick, setDblClick] = useState(false);
+  console.log("clicked");
 
   return (
-    <Draggable nodeRef={nodeRef} handle=".drag-handle"
-    position={dblClick ? { x: 0, y: 0 } : undefined}>
+    <Draggable
+      nodeRef={nodeRef}
+      handle=".drag-handle"
+      position={dblClick ? { x: 0, y: 0 } : undefined}
+    >
       <div
         ref={nodeRef}
         className={`fixed ${
@@ -34,7 +38,12 @@ const DraggableDiv = ({ visible, closeFunction }:IProps) => {
           } cursor-move h-12 border-b-2 border-red-400`}
           onDoubleClick={() => setDblClick(!dblClick)}
         >
-          <span className="font-semibold">Draggable Window <i className="text-stone-700 font-extralight">(double click to fullscreen)</i></span>
+          <span className="font-semibold">
+            Draggable Window{" "}
+            <i className="text-stone-700 font-extralight">
+              (double click to fullscreen)
+            </i>
+          </span>
           <div className="flex items-center justify-center w-6 h-6 rounded-4xl bg-red-600">
             <button className="text-stone-300 text-sm" onClick={closeFunction}>
               ✖
@@ -73,9 +82,15 @@ const DraggableDiv = ({ visible, closeFunction }:IProps) => {
 
             {/* Description Section */}
             <div className="font-extrabold text-stone-600 text-center max-w-5xl leading-relaxed">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat voluptatem facere aliquam, a tenetur qui culpa explicabo expedita? Maiores accusamus aliquid consequatur perspiciatis amet iure earum minus pariatur. Facilis, non?
-              Autem harum repudiandae omnis numquam excepturi nisi. Earum praesentium officia minus omnis, debitis quia repudiandae iure ipsam a aperiam nesciunt placeat ipsum? Officia tempora aliquam aperiam placeat, cumque impedit eius!
-                        </div>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
+              voluptatem facere aliquam, a tenetur qui culpa explicabo expedita?
+              Maiores accusamus aliquid consequatur perspiciatis amet iure earum
+              minus pariatur. Facilis, non? Autem harum repudiandae omnis
+              numquam excepturi nisi. Earum praesentium officia minus omnis,
+              debitis quia repudiandae iure ipsam a aperiam nesciunt placeat
+              ipsum? Officia tempora aliquam aperiam placeat, cumque impedit
+              eius!
+            </div>
 
             {/* Call to Action */}
             <div className="flex space-x-6">

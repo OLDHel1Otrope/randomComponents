@@ -5,7 +5,6 @@ import DraggableDiv from "./DraggableDiv";
 
 const InfoCard = ({ size }: { size: number }) => {
   const [visible, setVisible] = useState(false);
-
   return (
     <>
       {size === 1 ? (
@@ -14,7 +13,6 @@ const InfoCard = ({ size }: { size: number }) => {
           onClick={() => setVisible(!visible)}
         >
           <div className="rounded-3xl bg-stone-700 w-full h-full shadow-[inset_0px_0px_8px_rgba(0,0,0,0.4)] p-10">
-            j
           </div>
           <DraggableDiv
             visible={visible}
@@ -23,7 +21,7 @@ const InfoCard = ({ size }: { size: number }) => {
         </div>
       ) : (
         <div
-          className="rounded-4xl flex flex-col gap-2 bg-stone-300 w-full h-full shadow-[inset_0px_0px_8px_rgba(0,0,0,0.4)] p-2 hover:bg-stone-200 transition-all duration-500"
+          className="relative rounded-4xl flex flex-col gap-2 bg-stone-300 w-full h-full shadow-[inset_0px_0px_8px_rgba(0,0,0,0.4)] p-2 hover:bg-stone-200 transition-all duration-500"
           onClick={() => setVisible(!visible)}
         >
           <div className="rounded-3xl bg-stone-700 w-full h-full shadow-[inset_0px_0px_8px_rgba(0,0,0,0.4)] p-10"></div>

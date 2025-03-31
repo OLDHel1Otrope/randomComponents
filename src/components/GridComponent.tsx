@@ -171,11 +171,11 @@ const GridComponent = () => {
           My Projects
         </h1>
         <p className="text-lg text-stone-400 mt-2">
-          A SHOWCASE OF ALL MY WORK
+           SHOWCASE OF ALL MY WORK
         </p>
       </div>
       <div
-        className="grid gap-3 p-6 bg-gradient-to-br from-stone-800/80 to-stone-900/80 rounded-3xl shadow-[inset_0px_0px_15px_rgba(0,0,0,0.5)] backdrop-blur-lg border border-stone-700/30 group hover:shadow-[inset_0px_0px_20px_rgba(0,0,0,0.6)] transition-all duration-300"
+        className="grid gap-3 p-6 bg-gradient-to-br from-stone-800/80 to-stone-900/80 rounded-4xl shadow-[inset_0px_0px_15px_rgba(0,0,0,0.5)] backdrop-blur-lg border border-stone-700/30 group hover:shadow-[inset_0px_0px_20px_rgba(0,0,0,0.6)] transition-all duration-300"
         style={{
           gridTemplateColumns: `repeat(${gridCols}, 100px)`,
           gridTemplateRows: `repeat(${gridRows}, 100px)`,
@@ -185,13 +185,13 @@ const GridComponent = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="relative flex items-center justify-center overflow-hidden rounded-3xl bg-stone-800/50 backdrop-blur-md   group-hover:border-stone-600/40 transition-all duration-300"
+            className="flex items-center justify-center overflow-hidden rounded-3xl bg-stone-800/50 backdrop-blur-md   group-hover:border-stone-600/40 transition-all duration-300"
             style={{
               gridColumn: `${card.x + 1} / span ${card.width}`,
               gridRow: `${card.y + 1} / span ${card.height}`,
             }}
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05)_0%,transparent_60%)] opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+            {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05)_0%,transparent_60%)] opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div> */}
             <InfoCard size={card.size} />
           </div>
         ))}
