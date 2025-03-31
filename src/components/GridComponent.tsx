@@ -165,7 +165,15 @@ const GridComponent = () => {
     //     ))}
     //   </div>
     // </div>
-    <div className="w-full h-screen bg-stone-900 flex items-center justify-center p-8">
+    <div className="w-full h-screen bg-stone-900 flex items-center justify-center p-8 gap-40">
+      <div>
+        <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-stone-400">
+          My Projects
+        </h1>
+        <p className="text-lg text-stone-400 mt-2">
+          A SHOWCASE OF ALL MY WORK
+        </p>
+      </div>
       <div
         className="grid gap-3 p-6 bg-gradient-to-br from-stone-800/80 to-stone-900/80 rounded-3xl shadow-[inset_0px_0px_15px_rgba(0,0,0,0.5)] backdrop-blur-lg border border-stone-700/30 group hover:shadow-[inset_0px_0px_20px_rgba(0,0,0,0.6)] transition-all duration-300"
         style={{

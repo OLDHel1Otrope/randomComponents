@@ -5,11 +5,9 @@ import GridComponent from "@/components/GridComponent";
 import { useState } from "react";
 
 const Page = () => {
-  const [scale, setScale] = useState(1);
+  const [scale, setScale] = useState(0.8);
   return (
     <div className=" relative overflow-hidden flex-row w-full h-full bg-brand-100 text-white font-sans">
-      {/* <IntroComponent /> */}
-      {/* <AboutComponent /> */}
       <GridComponent />
       <div
         className="absolute w-16 h-16 bg-[#222222] rounded-full -top-10 -right-10 flex items-center z-20  filter invert  transition-transform duration-200 justify-center pointer-events-none mix-blend-difference "
@@ -25,7 +23,7 @@ const Page = () => {
           height: 48,
           transform: `scale(${1 / scale})`,
         }}
-        onClick={() => setScale((prev) => (prev === 1 ? 100 : 1))}
+        onClick={() => setScale((prev) => (prev === 0.8 ? 100 : 0.8))}
         ></div>
       </div>
     </div>

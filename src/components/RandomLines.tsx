@@ -11,20 +11,18 @@ interface Line {
 }
 
 const RandomLines = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const linesRef = useRef<Line[]>([]);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
 
-  const createRandomLine = (width: number, height: number): Line => {
-    return {
-      x1: Math.random() * width,
-      y1: Math.random() * height,
-      x2: Math.random() * width,
-      y2: Math.random() * height,
-      speed: 0.5 + Math.random() * 2,
-      opacity: 0.1 + Math.random() * 0.3,
-    };
-  };
+  const createRandomLine = (width: number, height: number): Line => ({
+    x1: Math.random() * width,
+    y1: Math.random() * height,
+    x2: Math.random() * width,
+    y2: Math.random() * height,
+    speed: 0.5 + Math.random() * 2,
+    opacity: 0.1 + Math.random() * 0.3,
+  });
 
   const initCanvas = () => {
     const canvas = canvasRef.current;
@@ -34,16 +32,16 @@ const RandomLines = () => {
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+
+      // Reinitialize lines after resizing
+      const numLines = Math.floor((canvas.width * canvas.height) / 10000);
+      linesRef.current = Array.from({ length: numLines }, () =>
+        createRandomLine(canvas.width, canvas.height)
+      );
     };
 
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
-
-    // Initialize lines
-    const numLines = Math.floor((canvas.width * canvas.height) / 10000);
-    linesRef.current = Array.from({ length: numLines }, () =>
-      createRandomLine(canvas.width, canvas.height)
-    );
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
@@ -74,7 +72,8 @@ const RandomLines = () => {
         line.x2 > canvas.width ||
         line.y2 > canvas.height
       ) {
-        Object.assign(line, createRandomLine(canvas.width, canvas.height));
+        const newLine = createRandomLine(canvas.width, canvas.height);
+        Object.assign(line, newLine); // Ensures type consistency
       }
 
       // Draw line
@@ -95,7 +94,7 @@ const RandomLines = () => {
 
     return () => {
       cleanup?.();
-      if (animationFrameRef.current) {
+      if (animationFrameRef.current !== null) {
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
@@ -110,4 +109,4 @@ const RandomLines = () => {
   );
 };
 
-export default RandomLines; 
+export default RandomLines;

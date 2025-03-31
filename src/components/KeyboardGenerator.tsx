@@ -2,7 +2,7 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { KeyboardKey } from "./KeyboardKey";
 
-const calculateWpm = (content: string,setWpm:Dispatch<SetStateAction<number>>, time:number) => {
+const calculateWpm = (content: string,setWpm:Dispatch<SetStateAction<number>>) => {
   const words = content.trim().split(/\s+/).length;
   setWpm(Math.round((words / 30) * 60));
 };
@@ -15,7 +15,7 @@ export default function KeyboardGenerator() {
   useEffect(() => {
     if (isRunning && time > 0) {
       const timer = setInterval(() => setTime((prev) => prev - 1), 1000);
-      calculateWpm(content,setWpm, time);
+      calculateWpm(content,setWpm);
       return () => clearInterval(timer);
     } else if (time === 0) {
       setIsRunning(false);
