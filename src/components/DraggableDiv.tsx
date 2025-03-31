@@ -3,8 +3,13 @@
 import { useRef, useState } from "react";
 import Draggable from "react-draggable";
 
-const DraggableDiv = ({ visible, closeFunction }) => {
-  const nodeRef = useRef(null);
+type IProps={
+  visible: boolean,
+  closeFunction:()=>void
+}
+
+const DraggableDiv = ({ visible, closeFunction }:IProps) => {
+  const nodeRef = useRef<HTMLDivElement>(null!);
   const [dblClick, setDblClick] = useState(false);
 
   return (

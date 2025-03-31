@@ -67,7 +67,7 @@ const Letter = ({
           className={`flex ${
             size == "small" ? "w-1 h-1" : "w-2 h-2"
           } rounded-sm text-sm ${
-            charPixelMap[normalizedLetter]?.includes(item - 1)
+            charPixelMap[normalizedLetter as keyof typeof charPixelMap]?.includes(item - 1)
               ? "bg-[radial-gradient(circle,_rgba(220,220,220,1)_0%,_rgba(180,180,180,1)_70%)]"
               : "bg-stone-950"
           }`}

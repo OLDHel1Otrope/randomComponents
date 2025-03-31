@@ -19,7 +19,7 @@ const IntroComponent = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className=" flex flex-col gap-8 bg-stone-900 w-screen h-full pt-50 px-120">
+    <div className=" flex flex-col gap-8 bg-stone-900 w-full h-full pt-50 px-120">
       <div>
         <TextGenerator data="hello" size={"small"} />
       </div>
