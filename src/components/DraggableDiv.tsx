@@ -21,7 +21,7 @@ const DraggableDiv = ({ visible, closeFunction }: IProps) => {
       <div
         ref={nodeRef}
         className={`fixed ${
-          dblClick ? "w-full h-full" : "w-300 h-170"
+          dblClick ? "w-screen h-screen" : "w-300 h-170"
         } bg-stone-300 shadow-2xl ${
           dblClick
             ? "top-0 left-0"
