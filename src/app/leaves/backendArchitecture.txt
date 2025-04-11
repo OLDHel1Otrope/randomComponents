@@ -1,0 +1,41 @@
+/backend
+├── /config
+│   └── database.js                # Database connection configuration
+│   └── auth.js                    # Authentication configuration (JWT, secret keys, etc.)
+│
+├── /controllers
+│   └── authController.js          # Controller for handling authentication-related requests (login, signup, etc.)
+│   └── userController.js          # Controller for user-related CRUD operations
+│   └── leaveController.js         # Controller for managing leave requests (if applicable)
+│
+├── /models
+│   └── user.js                    # Sequelize model for the 'User' entity
+│   └── leave.js                   # Sequelize model for the 'Leave' entity
+│   └── index.js                   # Auto-imports all models
+│
+├── /middleware
+│   └── authMiddleware.js          # Middleware to protect routes requiring authentication
+│   └── errorMiddleware.js         # Error handling middleware
+│
+├── /routes
+│   └── authRoutes.js              # Routes for login, signup, etc.
+│   └── userRoutes.js              # Routes for user CRUD operations
+│   └── leaveRoutes.js             # Routes for leave requests
+│
+├── /services
+│   └── authService.js             # Service for authentication (hashing password, validating JWT, etc.)
+│   └── userService.js             # Service for user-specific logic
+│   └── leaveService.js            # Service for leave-related business logic
+│
+├── /utils
+│   └── helper.js                  # Utility functions (for hashing, etc.)
+│   └── validators.js              # Input validation logic (e.g., for email format)
+│
+├── /migrations
+│   └── 20230411010100-create-user.js # Sequelize migration files for DB schema updates
+│
+├── .env                            # Environment variables (e.g., DB connection string, JWT secret)
+├── .gitignore                      # Git ignore file
+├── app.js                          # Main server file (if using Express)
+├── package.json                    # NPM dependencies and scripts
+└── README.md                       # Documentation for the backend project
