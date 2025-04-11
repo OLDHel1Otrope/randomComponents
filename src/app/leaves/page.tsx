@@ -7,7 +7,7 @@ import Contacts from "@/components/Contacts";
 function App() {
   const today = new Date();
   return (
-    <div className="min-h-screen flex pt-4 justify-center bg-stone-950 px-10 pl-20 gap-4">
+    <div className="min-h-screen flex flex-col md:flex-row pt-4 justify-center bg-stone-950 px-10 pl-20 gap-4">
       <div className="flex flex-col w-full gap-4">
         <DashboardHeader userName="Utkarsh" />
         <PendingApprovals
